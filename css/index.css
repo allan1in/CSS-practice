@@ -1,0 +1,330 @@
+/* 内容区 */
+
+.container {
+    background-color: #f7f7f7;
+}
+
+/* 绿色横幅区 */
+
+.banner {
+    padding: 152px 0 112px;
+    position: relative;
+    /* 防止绿色背景溢出 */
+    overflow: hidden;
+}
+
+/* 椭圆形绿色背景 */
+
+.banner__background {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    width: 175%;
+    background-color: #2aae67;
+    min-height: 1440px;
+    border-radius: 0 0 50% 50%;
+}
+
+/* 内容区 */
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+}
+
+/* 避免绿色背景覆盖内容 */
+
+.banner :nth-child(n) {
+    z-index: 1;
+}
+
+/* 微信logo */
+
+.banner__logo {
+    width: 180px;
+    height: 56px;
+    margin-bottom: 56px;
+    background: url(../svg/logo.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 更新列表 */
+
+.banner__update-log {
+    width: 500px;
+    padding-top: 24px;
+}
+
+.banner__update-content,
+.banner__update-more,
+.banner__updata-time {
+    color: hsla(0, 0%, 100%, .9);
+    font-size: 20px;
+}
+
+.banner__update-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.banner__updata-time {
+    color: hsla(0, 0%, 100%, .7);
+}
+
+.banner__update-more {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+/* 圆形按钮列表 */
+
+.banner__download {
+    padding-top: 72px;
+    display: flex;
+    width: calc(760px - 32px);
+    justify-content: space-between;
+}
+
+.banner__download-item {
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    background-color: hsla(0, 0%, 100%, .07);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner__download-item:hover {
+    background-color: hsla(0, 0%, 100%, .15);
+}
+
+
+.banner__download-item i {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    margin: 26px 0 4px;
+}
+
+.banner__download-item span {
+    display: inline-block;
+    width: 84px;
+    text-align: center;
+    color: hsla(0, 0%, 100%, .9);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.icon-android {
+    background: url(../svg/android.svg);
+}
+
+.icon-ios {
+    background: url(../svg/ios.svg);
+}
+
+.icon-windows {
+    background: url(../svg/windows.svg);
+}
+
+.icon-macos {
+    background: url(../svg/macos.svg);
+}
+
+.icon-transfer {
+    background: url(../svg/transfer.svg);
+}
+
+/* 矩形按钮列表 */
+
+.banner__extra-edition {
+    width: 715px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+
+.banner__extra-item {
+    width: 217px;
+    height: 56px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .07);
+    color: hsla(0, 0%, 100%, .9);
+    font-size: 16px;
+}
+
+.banner__extra-item:hover {
+    background-color: hsla(0, 0%, 100%, .15);
+}
+
+.banner__extra-item i {
+    height: 32px;
+    width: 32px;
+    background-size: cover;
+    margin-right: 8px;
+}
+
+.icon-child-watch {
+    background: url(../svg/child-watch.svg);
+}
+
+.icon-car {
+    background: url(../svg/car.svg);
+}
+
+.icon-input-method {
+    background: url(../svg/input-method.svg);
+}
+
+/* 语言切换 */
+
+.banner__language-change {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    z-index: 1;
+}
+
+.banner__language-item {
+    display: inline-block;
+    height: 15px;
+    line-height: 13px;
+    color: hsla(0, 0%, 100%, .6);
+    padding: 0 8px;
+    transition: color .3s;
+}
+
+.banner__language-item:hover {
+    color: hsla(0, 0%, 100%, .9);
+}
+
+.banner__language-item:last-child {
+    border-left: 1px solid hsla(0, 0%, 100%, .3);
+}
+
+/* 向下箭头 */
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .5;
+        transform: translateY(8px);
+    }
+}
+
+.banner__arrow {
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    translate: -50%;
+    background: url(../svg/down-arrow.svg);
+    background-size: cover;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+/* 正方形卡片 */
+
+.links{
+    width: 1056px;
+    padding: 72px 0 72px 32px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex: 232px;
+}
+
+.links__link-card {
+    display: block;
+    background-color: #fff;
+    width: 232px;
+    height: 196px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 32px 32px 0;
+    font-size: 20px;
+    font-family: 'weixin-test';
+    transition: all 0.3s ease;
+}
+
+.links__link-card:hover {
+    scale: 1.1;
+}
+
+.links__link-card i {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    margin-bottom: 16px;
+}
+
+.icon-wechat-pay {
+    background: url(../svg/wechat-pay.svg);
+}
+
+/* 底部栏 */
+
+.footer {
+    padding: 40px 0 32px;
+}
+
+.footer__links {
+    width: 500px;
+    margin: 0 auto 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.footer__links a {
+    margin: 0 10px;
+}
+
+:where(.footer__links) a,
+span {
+    color: hsla(0, 0%, 0%, .7)
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer__record a,
+.footer__copyright {
+    color: rgba(0, 0, 0, .4);
+    font-size: 12px;
+}
+
+.footer__record,
+.footer__copyright {
+    text-align: center;
+}
+
+.footer__copyright {
+    margin-top: 2px;
+}
