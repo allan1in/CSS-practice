@@ -45,12 +45,10 @@
 /* 微信logo */
 
 .banner__logo {
-    width: 180px;
-    height: 56px;
+    width: 181px;
+    height: 58px;
     margin-bottom: 56px;
-    background: url(../svg/logo.svg);
     background-size: cover;
-    background-position: center;
 }
 
 /* 更新列表 */
@@ -124,26 +122,6 @@
     line-height: 1.4;
 }
 
-.icon-android {
-    background: url(../svg/android.svg);
-}
-
-.icon-ios {
-    background: url(../svg/ios.svg);
-}
-
-.icon-windows {
-    background: url(../svg/windows.svg);
-}
-
-.icon-macos {
-    background: url(../svg/macos.svg);
-}
-
-.icon-transfer {
-    background: url(../svg/transfer.svg);
-}
-
 /* 矩形按钮列表 */
 
 .banner__extra-edition {
@@ -174,18 +152,6 @@
     width: 32px;
     background-size: cover;
     margin-right: 8px;
-}
-
-.icon-child-watch {
-    background: url(../svg/child-watch.svg);
-}
-
-.icon-car {
-    background: url(../svg/car.svg);
-}
-
-.icon-input-method {
-    background: url(../svg/input-method.svg);
 }
 
 /* 语言切换 */
@@ -234,7 +200,6 @@
     left: 50%;
     bottom: 40px;
     translate: -50%;
-    background: url(../svg/down-arrow.svg);
     background-size: cover;
     animation-name: arrow;
     animation-duration: 1s;
@@ -280,10 +245,6 @@
     width: 40px;
     background-size: cover;
     margin-bottom: 16px;
-}
-
-.icon-wechat-pay {
-    background: url(../svg/wechat-pay.svg);
 }
 
 /* 底部栏 */

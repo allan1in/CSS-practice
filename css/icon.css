@@ -1,0 +1,101 @@
+/* 引入页面中所有的icon文件 */
+
+.icon-logo {
+    background: url(../image/svg/logo.svg);
+}
+
+.icon-android {
+    background: url(../image/svg/android.svg);
+}
+
+.icon-ios {
+    background: url(../image/svg/ios.svg);
+}
+
+.icon-windows {
+    background: url(../image/svg/windows.svg);
+}
+
+.icon-macos {
+    background: url(../image/svg/macos.svg);
+}
+
+.icon-transfer {
+    background: url(../image/svg/transfer.svg);
+}
+
+.icon-child-watch {
+    background: url(../image/svg/child-watch.svg);
+}
+
+.icon-car {
+    background: url(../image/svg/car.svg);
+}
+
+.icon-input-method {
+    background: url(../image/svg/input-method.svg);
+}
+
+.icon-down-arrow {
+    background: url(../image/svg/down-arrow.svg);
+}
+
+.icon-wechat-pay {
+    background: url(../image/svg/wechat-pay.svg);
+}
+
+.icon-sub-account {
+    background: url(../image/svg/sub-account.svg);
+}
+
+.icon-mini-program {
+    background: url(../image/svg/mini-program.svg);
+}
+
+.icon-video-helper {
+    background: url(../image/svg/video-helper.svg);
+}
+
+.icon-mini-game {
+    background: url(../image/svg/mini-game.svg);
+}
+
+.icon-mini-store {
+    background: url(../image/png/mini-store.png);
+}
+
+.icon-emotion-open {
+    background: url(../image/svg/emotion-open.svg);
+}
+
+.icon-search-open {
+    background: url(../image/svg/search-open.svg);
+}
+
+.icon-red-packet-open {
+    background: url(../image/svg/red-packet-open.svg);
+}
+
+.icon-conversation-open {
+    background: url(../image/svg/conversation-open.svg);
+}
+
+.icon-open-community {
+    background: url(../image/png/open-community.png);
+}
+
+.icon-service-market {
+    background: url(../image/svg/service-market.svg);
+}
+
+.icon-company-wechat {
+    background: url(../image/png/company-wechat.png);
+}
+
+.icon-wechat-school {
+    background: url(../image/svg/wechat-school.svg);
+}
+
+.icon-official-resource {
+    background: url(../image/svg/official-resource.svg);
+}
