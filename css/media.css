@@ -1,0 +1,139 @@
+/* 大屏设备 */
+
+@media (max-width: 1400px) {
+
+    /* 三列链接卡片 */
+    .links {
+        width: calc((232px + 32px) * 3);
+    }
+}
+
+/* 中屏设备 */
+
+@media (max-width: 830px) {
+
+    /* 绿色背景 */
+    .banner__background {
+        width: 210%;
+    }
+
+    /* 两列链接卡片 */
+    .links {
+        width: calc((232px + 32px) * 2);
+    }
+
+    .links__link-card {
+        height: 170px;
+    }
+
+    /* 三列下载按钮 */
+    .banner__download {
+        width: calc((120px + 32px) * 3);
+    }
+
+    .banner__download-item:nth-child(-n+3) {
+        margin-bottom: 32px;
+    }
+
+    /* 更新列表宽度保持一致 */
+    .banner__update-log {
+        width: calc(((120px + 32px) * 3) - 32px);
+    }
+
+    /* 两列矩形按钮 */
+    .banner__extra-edition {
+        width: calc(((120px + 32px) * 3) - 32px);
+    }
+
+    .banner__extra-item {
+        width: calc(((((120px + 32px) * 3) - 32px) - 32px) / 2);
+    }
+
+    .banner__extra-item:nth-child(-n+2) {
+        margin-bottom: 32px;
+    }
+}
+
+/* 小屏设备 */
+
+@media (max-width: 560px) {
+
+    /* 微信logo */
+    .banner__logo {
+        width: 130px;
+        height: 41px;
+    }
+
+    /* 绿色背景 */
+    .banner__background {
+        width: 270%;
+    }
+
+    /* 缩小语言切换字体 */
+    .banner__language-item {
+        font-size: 14px;
+    }
+
+    .banner__language-change {
+        right: 20px;
+        top: 20px;
+    }
+
+    /* 两列链接卡片，百分比宽度和边距 */
+    .links {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .links__link-card {
+        width: 44%;
+        height: 150px;
+        margin: 0 4% 4% 0;
+        font-size: 16px;
+    }
+
+    .links__link-card:nth-child(odd) {
+        margin-left: 4%;
+    }
+
+    /* 两列下载按钮 */
+    .banner__download {
+        width: calc((120px + 32px) * 2);
+    }
+
+    .banner__download-item:nth-child(-n+2) {
+        margin-bottom: 32px;
+    }
+
+    /* 缩小更新日志板块 */
+    .banner__update-log {
+        width: calc(((120px + 32px) * 2) - 32px);
+    }
+
+    .banner__update-content,
+    .banner__update-time {
+        font-size: 14px;
+    }
+
+    .banner__update-more {
+        font-size: 14px;
+    }
+
+    /* 缩小两列矩形按钮 */
+    .banner__extra-edition {
+        width: calc(((120px + 32px) * 2) - 32px);
+    }
+
+    .banner__extra-item {
+        width: calc(((((120px + 32px) * 2) - 32px) - 14px) / 2);
+        font-size: 14px;
+    }
+
+    .banner__extra-item i {
+        margin-right: 0;
+    }
+
+    .banner__extra-item:nth-child(-n+2) {
+        margin-bottom: 14px;
+    }
+}
