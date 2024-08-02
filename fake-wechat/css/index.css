@@ -24,6 +24,8 @@
     animation: 1s fromBottom ease-out;
 }
 
+/* 进入动画 */
+
 @keyframes fromBottom {
     0% {
         opacity: 0;
