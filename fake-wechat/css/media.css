@@ -13,8 +13,8 @@
 @media (max-width: 830px) {
 
     /* 绿色背景 */
-    .banner__background {
-        width: 210%;
+    .banner {
+        clip-path: ellipse(150% 100% at top center);
     }
 
     /* 两列链接卡片 */
@@ -65,8 +65,8 @@
     }
 
     /* 绿色背景 */
-    .banner__background {
-        width: 270%;
+    .banner {
+        clip-path: ellipse(200% 100% at top center);
     }
 
     /* 缩小语言切换字体 */
