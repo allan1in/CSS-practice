@@ -1,3 +1,9 @@
+/* 响应式字体，根元素字体为浏览器默认大小（16rem）的 62.5% (10rem)*/
+
+html {
+    font-size: 62.5%;
+}
+
 /* 内容区 */
 
 .container {
@@ -8,7 +14,7 @@
 /* 绿色横幅区 */
 
 .banner {
-    padding: 152px 0 112px;
+    padding: 15.2rem 0 11.2rem;
     position: relative;
     background-color: #2aae67;
     clip-path: ellipse(100% 100% at top center);
@@ -22,6 +28,7 @@
     align-items: center;
     line-height: 1.6;
     animation: 1s fromBottom ease-out;
+    overflow: hidden;
 }
 
 /* 进入动画 */
@@ -29,7 +36,7 @@
 @keyframes fromBottom {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(5rem);
     }
 
     100% {
@@ -41,31 +48,31 @@
 /* 微信logo */
 
 .banner__logo {
-    width: 181px;
-    height: 58px;
-    margin-bottom: 56px;
+    width: 18.1rem;
+    height: 5.8rem;
+    margin-bottom: 5.6rem;
     background-size: cover;
 }
 
 /* 更新列表 */
 
 .banner__update-log {
-    width: 500px;
-    padding-top: 24px;
-    border-top: 1px solid hsla(0, 0%, 100%, .2);
+    width: 50rem;
+    padding-top: 2.4rem;
+    border-top: .1rem solid hsla(0, 0%, 100%, .2);
 }
 
 .banner__update-content,
 .banner__update-more,
 .banner__update-time {
     color: hsla(0, 0%, 100%, .9);
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .banner__update-list li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .banner__update-time {
@@ -74,14 +81,14 @@
 
 .banner__update-more {
     display: inline-block;
-    margin-top: 16px;
+    margin-top: 1.6rem;
 }
 
 /* 圆形按钮列表 */
 
 .banner__download {
-    width: 760px;
-    padding: 72px 0 0 32px;
+    width: 76rem;
+    padding: 7.2rem 0 0 3.2rem;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -89,15 +96,15 @@
 
 .banner__download-item {
     display: inline-block;
-    height: 120px;
-    width: 120px;
+    height: 12rem;
+    width: 12rem;
     background-color: hsla(0, 0%, 100%, .07);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-right: 32px;
+    margin-right: 3.2rem;
 }
 
 .banner__download-item:hover {
@@ -106,41 +113,41 @@
 
 
 .banner__download-item i {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     background-size: cover;
-    margin: 26px 0 4px;
+    margin: 2.6rem 0 .4rem;
 }
 
 .banner__download-item span {
     display: inline-block;
-    width: 84px;
+    width: 8.4rem;
     text-align: center;
     color: hsla(0, 0%, 100%, .9);
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.4;
 }
 
 /* 矩形按钮列表 */
 
 .banner__extra-edition {
-    width: 715px;
+    width: 71.5rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 56px;
+    padding-top: 5.6rem;
 }
 
 .banner__extra-item {
-    width: 217px;
-    height: 56px;
-    border-radius: 5px;
+    width: 21.7rem;
+    height: 5.6rem;
+    border-radius: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: hsla(0, 0%, 100%, .07);
     color: hsla(0, 0%, 100%, .9);
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .banner__extra-item:hover {
@@ -148,27 +155,26 @@
 }
 
 .banner__extra-item i {
-    height: 32px;
-    width: 32px;
+    height: 3.2rem;
+    width: 3.2rem;
     background-size: cover;
-    margin-right: 8px;
+    margin-right: .8rem;
 }
 
 /* 语言切换 */
 
 .banner__language-change {
     position: absolute;
-    top: 32px;
-    right: 32px;
-    z-index: 1;
+    top: 3.2rem;
+    right: 3.2rem;
 }
 
 .banner__language-item {
     display: inline-block;
-    height: 15px;
-    line-height: 13px;
+    height: 1.5rem;
+    line-height: 1.3rem;
     color: hsla(0, 0%, 100%, .6);
-    padding: 0 8px;
+    padding: 0 .8rem;
     transition: color .3s;
 }
 
@@ -177,7 +183,7 @@
 }
 
 .banner__language-item:last-child {
-    border-left: 1px solid hsla(0, 0%, 100%, .3);
+    border-left: .1rem solid hsla(0, 0%, 100%, .3);
 }
 
 /* 向下箭头 */
@@ -189,29 +195,30 @@
 
     100% {
         opacity: .5;
-        transform: translateY(8px);
+        transform: translateY(.8rem);
     }
 }
 
 .banner__arrow {
-    width: 24px;
-    height: 12px;
+    width: 2.4rem;
+    height: 1.2rem;
     position: absolute;
     left: 50%;
-    bottom: 40px;
+    bottom: 4rem;
     translate: -50%;
     background-size: cover;
     animation-name: arrow;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
+    animation-delay: 1s;
 }
 
 /* 正方形卡片 */
 
 .links {
-    width: 1056px;
-    padding: 72px 0 72px 32px;
+    width: 105.6rem;
+    padding: 7.2rem 0 7.2rem 3.2rem;
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
@@ -221,16 +228,17 @@
 
 .links__link-card {
     display: block;
+    color: #000;
     background-color: #fff;
-    width: 232px;
-    height: 196px;
-    border-radius: 8px;
+    width: 23.2rem;
+    height: 19.6rem;
+    border-radius: .8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 32px 32px 0;
-    font-size: 20px;
+    margin: 0 3.2rem 3.2rem 0;
+    font-size: 2rem;
     font-family: 'weixin-test';
     transition: all 0.3s ease;
 }
@@ -241,29 +249,29 @@
 
 .links__link-card i {
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 4rem;
+    width: 4rem;
     background-size: cover;
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
 }
 
 /* 底部栏 */
 
 .footer {
-    padding: 40px 0 32px;
+    padding: 4rem 0 3.2rem;
 }
 
 .footer__links {
-    margin-bottom: 8px;
+    margin-bottom: .8rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 13px;
+    font-size: 1.3rem;
     color: rgba(0, 0, 0, .7);
 }
 
 .footer__links a {
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 :where(.footer__links) a,
@@ -278,7 +286,7 @@ span {
 .footer__record a,
 .footer__copyright {
     color: rgba(0, 0, 0, .4);
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .footer__record,
@@ -287,5 +295,5 @@ span {
 }
 
 .footer__copyright {
-    margin-top: 2px;
+    margin-top: .2rem;
 }

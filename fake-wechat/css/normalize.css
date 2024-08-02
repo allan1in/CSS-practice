@@ -2,13 +2,11 @@
 
 body {
     margin: 0;
-
 }
 
 /* 清除链接的默认样式 */
 
 a {
-    color: #000;
     text-decoration: none;
 }
 
