@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    /* 继承了body中的box-sizing属性，采用继承的原因：在其他组件中更容易对 box-sizing 进行修改*/
+    box-sizing: inherit;
+}
+
+html {
+    /* 浏览器字体大小默认16px，设置为10px，10/16 = 62.5% */
+    /* 响应式字体，意味着字体大小为浏览器默认字体的62.5%，让用户可以通过修改浏览器默认字体大小来修改网页字体 */
+    /* 定义了 rem 的大小 */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
