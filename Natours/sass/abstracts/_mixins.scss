@@ -1,0 +1,11 @@
+// SCSS混入插值
+
+@mixin clearfix {
+
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

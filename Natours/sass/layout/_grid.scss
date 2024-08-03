@@ -1,0 +1,85 @@
+// float实现12列网格布局
+
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    // 最后一行没有下边距
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    // 每一列的通用样式
+    [class^="col-"] {
+        float: left;
+
+        // 最后一列没有右边距
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    // 1/12
+    .col-1 {
+        width: calc((100% - 11 * #{$gutter-horizontal}) / 12);
+    }
+
+    // 2/12
+    .col-2 {
+        width: calc((100% - 5 * #{$gutter-horizontal}) / 6);
+    }
+
+    // 3/12
+    .col-3 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    // 4/12
+    .col-4 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    // 5/12
+    .col-5 {
+        width: calc(5 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 4 * #{$gutter-horizontal});
+    }
+
+    // 6/12
+    .col-6 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+    // 7/12
+    .col-7 {
+        width: calc(7 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 6 * #{$gutter-horizontal});
+    }
+
+    // 8/12
+    .col-8 {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+
+    // 9/12
+    .col-9 {
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
+
+    // 10/12
+    .col-10 {
+        width: calc(5 * ((100% - 5 * #{$gutter-horizontal}) / 6) + 4 * #{$gutter-horizontal});
+    }
+
+    // 11/12
+    .col-11 {
+        width: calc(11 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 10 * #{$gutter-horizontal});
+    }
+
+    // 12/12
+    .col-12 {
+        width: calc(100%);
+    }
+
+
+}
