@@ -1,0 +1,168 @@
+.card {
+    // 定义透视：观察者与 z=0 平面的距离
+    perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    &__side {
+        height: 100%;
+        transition: all .8s ease;
+        // 绝对定位让卡片的正面和背面重叠
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // 隐藏卡片背面可见性
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            // 正面背景
+            background-color: $color-white;
+        }
+
+        &--back {
+            // 卡片背面逆时针旋转（俯视）
+            transform: rotateY(180deg);
+
+            // 背面背景
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        // 卡片正面顺时针旋转（俯视），注意旋转的方向，保证两个卡片衔接的连贯
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        // 展示卡片背面
+        transform: rotateY(0);
+    }
+
+    // 正面样式
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        // 混合模式：混合背景颜色和背景图片
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            // 注意相对路径，是以css文件的位置为基准
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                url(../img/nat-5.jpg);
+
+
+        }
+
+        &--2 {
+            // 注意相对路径，是以css文件的位置为基准
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+                url(../img/nat-6.jpg);
+        }
+
+        &--3 {
+            // 注意相对路径，是以css文件的位置为基准
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+                url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        text-align: right;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        // 将heading-span元素挤成两行
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        // 元素跨行时，每行的样式都保持一致，在这里是为了保证每行有同样的内边距
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary-light, .85), 
+            rgba($color-secondary-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-primary-light, .85), 
+            rgba($color-primary-dark, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-tertiary-light, .85), 
+            rgba($color-tertiary-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style-type: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    // 背面样式
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}
