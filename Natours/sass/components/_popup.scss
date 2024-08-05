@@ -1,0 +1,92 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2500;
+    background-color: rgba($color-black, .8);
+    // display: none; 无法显示动画，opacity: 0; 可以显示动画
+    opacity: 0;
+    // 让元素的鼠标键盘事件失效，同时不可见，但是无法显示动画
+    visibility: hidden;
+    transition: all .3s;
+
+    // 当地址栏的链接中有锚点指向 popup 元素时触发卡片的显示
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target>&__content {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    // 点击关闭按钮后，锚点指向 section-tours 区域，:target 失效
+    &__close {
+
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            right: 2.5rem;
+            top: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__content {
+        @include absCenter;
+        width: 75%;
+        background-color: $color-white;
+        border-radius: 3px;
+        z-index: 3000;
+        // 让 left right 左右布局（等高）
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        // 延迟 .2s
+        transition: all .3s .2s;
+    }
+
+    &__left {
+        width: 33.333333%;
+        // 让 left right 左右布局（等高）
+        display: table-cell;
+
+    }
+
+    &__right {
+        width: 66.666667%;
+        // 让 left right 左右布局（等高）
+        display: table-cell;
+        // 让 right 和 left 的中间对齐
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        // 分列布局
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+        // 连字符
+        hyphens: auto;
+    }
+}
