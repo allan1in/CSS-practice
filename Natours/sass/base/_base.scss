@@ -10,12 +10,42 @@
 }
 
 html {
-    /* 浏览器字体大小默认16px，设置为10px，10/16 = 62.5% */
-    /* 响应式字体，意味着字体大小为浏览器默认字体的62.5%，让用户可以通过修改浏览器默认字体大小来修改网页字体 */
-    /* 定义了 rem 的大小 */
+    /* 
+    浏览器字体大小默认16px，设置为10px，10/16 = 62.5%
+    响应式字体，意味着字体大小为浏览器默认字体的62.5%，让用户可以通过修改浏览器默认字体大小来修改网页字体
+    定义了 rem 的大小 
+    */
+
     font-size: 62.5%;
+
+    // 媒体查询顺序：对于 max-width ,小设备要在大设备之后
+
+    @include respond(tab-land) {
+        font-size: 56.250%;
+        // 9px
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+        // 8px
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+        // 12px
+    }
+
+    // @include respond(phone) {
+    //     font-size: 50%;
+    //     // 8px
+    // }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }

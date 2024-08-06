@@ -65,8 +65,6 @@
             // 注意相对路径，是以css文件的位置为基准
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
                 url(../img/nat-5.jpg);
-
-
         }
 
         &--2 {
@@ -101,21 +99,21 @@
         box-decoration-break: clone;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-secondary-light, .85), 
-            rgba($color-secondary-dark, .85));
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-secondary-light, .85),
+                    rgba($color-secondary-dark, .85));
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-primary-light, .85), 
-            rgba($color-primary-dark, .85));
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-primary-light, .85),
+                    rgba($color-primary-dark, .85));
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-tertiary-light, .85), 
-            rgba($color-tertiary-dark, .85));
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-tertiary-light, .85),
+                    rgba($color-tertiary-dark, .85));
         }
     }
 
@@ -161,5 +159,54 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
+    }
+
+    @include respond(tab-port) {
+        // 对于移动端，删除 hover 效果，将卡片背面移动到正面的下面
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &__side {
+            height: auto;
+            // 清除正反面的 absolute
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        // 清除 hover 的旋转
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        // 背面样式
+
+        &__cta {
+            // 清除原有的居中
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+        }
+
+        &__details {
+            padding: 1rem 4rem;
+        }
     }
 }
