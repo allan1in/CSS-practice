@@ -2,7 +2,7 @@
 
 ## fake-wechat
 
-练习：微信官网
+练习：[微信官网](https://weixin.qq.com/)
 
 - HTML + CSS
 - Flex
@@ -17,8 +17,11 @@
 练习：[Natours](https://github.com/jonasschmedtmann/advanced-css-course)
 
 - SCSS
-- 工程化
-- 有趣的 CSS 技巧
-- 响应式
+- npm scripts 实现构建流程脚本
+- 有趣的 CSS tricks
+- 响应式（图像、布局）
+- 浏览器兼容（特征查询、媒体查询）
+- SASS 构建模式：[7-1-pattern](https://sass-guidelin.es/#the-7-1-pattern)
+- float 实现 flex 布局
 
-![image](https://github.com/user-attachments/assets/722c44d0-4bd3-4e58-a89c-66ba9ebc9f5e)
+![image](https://github.com/user-attachments/assets/cd80653d-8589-467c-95dd-527c93b34d8a)
