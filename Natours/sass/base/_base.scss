@@ -49,3 +49,10 @@ body {
         padding: 0;
     }
 }
+
+
+// 字体被鼠标框选时的样式
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

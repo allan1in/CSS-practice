@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/icon-font.css">
+    <!-- 开发环境下取消下一行注释 -->
+    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -75,10 +77,17 @@
                     <a href="#" class="btn-text">Learn more &rarr;</a>
                 </div>
                 <div class="col-6">
+                    <!-- 响应式图片 -->
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 1000px"
+                            src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 1000px"
+                            src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 1000px"
+                            src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
                     </div>
                 </div>
             </div>
@@ -329,9 +338,13 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="footer__logo-box">
-                <img class="footer__logo" src="img/logo-green-2x.png" alt="Full logo">
-            </div>
+            <!-- 响应式图片（这里只有一个 source，使用 img + srcset 更合适） -->
+            <picture class="footer__logo-box">
+                <source srcset="img/logo-green-small-1x.png 1x,img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+                <img class="footer__logo" srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" alt="Full logo"
+                    src="img/logo-green-2x.png">
+            </picture>
             <div class="row">
                 <div class="col-6">
                     <div class="footer__navigation">

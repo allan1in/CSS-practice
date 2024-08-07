@@ -1,16 +1,32 @@
 // 头部标题样式
 
 .header {
-    height: 95vh;
+    height: 85vh;
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)),
-        url(../img/hero.jpg);
+        url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
     overflow: hidden;
+
+    // 特征查询：更优雅地适配不同浏览器，clip-path 现在已经全部支持，这里只是例子
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        // 如果可以正常裁切，为了美观，让高度高一些
+        height: 95vh;
+    }
+
+    // 响应式图像：对于高分辨率设备，提供高分辨率的图片
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+            url(../img/hero.jpg);
+    }
 
     @include respond(tab-port) {
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

@@ -161,7 +161,9 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    // 为媒体查询新增条件：设备不可以 hover 时，加载无法翻转的卡片
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover:none) {
         // 对于移动端，删除 hover 效果，将卡片背面移动到正面的下面
         height: auto;
         border-radius: 3px;
