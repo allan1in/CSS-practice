@@ -22,6 +22,7 @@
 - 响应式（图像、布局）
 - 浏览器兼容（特征查询、媒体查询）
 - SASS 构建模式：[7-1-pattern](https://sass-guidelin.es/#the-7-1-pattern)
+- CSS 命名规则：[BEM](https://getbem.com/)
 - float 实现 flex 布局
 
 ![image](https://github.com/user-attachments/assets/cd80653d-8589-467c-95dd-527c93b34d8a)
