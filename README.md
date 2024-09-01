@@ -1,4 +1,4 @@
-# CSS-practice
+# css-practice
 
 这里包含了一些面向初学者的 CSS 练手项目
 
