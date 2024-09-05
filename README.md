@@ -12,7 +12,7 @@
 - 动画，变换，过渡
 - 网络字体 (Weixin-test)
 
-在线展示：[fake-wechat](https://allan1in.github.io/CSS-practice/fake-wechat/html/index.html)
+在线展示：[fake-wechat](https://allan1in.github.io/css-practice/fake-wechat/html/index.html)
 
 ## Natours
 
@@ -27,4 +27,4 @@
 - CSS 命名规则：[BEM](https://getbem.com/)
 - 用浮动实现 Flex 布局
 
-在线展示：[Natours](https://allan1in.github.io/CSS-practice/Natours/index.html)
+在线展示：[Natours](https://allan1in.github.io/css-practice/Natours/index.html)
